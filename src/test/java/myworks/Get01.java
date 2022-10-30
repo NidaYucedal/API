@@ -36,25 +36,41 @@ And
     @Test
     public void get01() {
 
-       spec.pathParam("first", "productsList");
+        spec.pathParam("first", "productsList");
 
-       Response response = given().spec(spec).contentType(ContentType.JSON).when().get("{first}");
-       response.prettyPrint();
+        Response response = given().spec(spec).when().get("/{first}");
 
-
-       List<HashMap<String,Object>> pro;
-
-      JsonPath json = response.jsonPath();
-      pro = json.getList("products");
-      System.out.println(pro);
       SoftAssert softAssert = new SoftAssert();
-      softAssert.assertEquals(response.statusCode(), 200);
-      softAssert.assertEquals(response.contentType(), "text/html; charset=utf-8");
-      softAssert.assertEquals(response.statusLine(), "200 OK");
+      // softAssert.assertEquals(response.statusCode(), 200);
+      // softAssert.assertEquals(response.contentType(), "text/html; charset=utf-8");
+      // softAssert.assertEquals(response.statusLine(), "200 OK");
 
 
+        JsonPath jsonPath = response.jsonPath();
 
-      softAssert.assertAll();
+        List<String> womenList = jsonPath.getList("products.category.usertype.usertype");
+        System.out.println(womenList.size());
+        System.out.println(womenList);
+        int womenIndex = 0;
+        int menIndex = 0;
+        int kidsIndex = 0;
+        for (String w : womenList
+        ) {
+            if (w.equals("Women")) {
+                womenIndex++;
+            } else if (w.equals("Men")) {
+                menIndex++;
+            } else if (w.equals("Kids")) {
+                kidsIndex++;
+            }
+        }
+        System.out.println("kidsIndex = " + kidsIndex);
+        System.out.println("menIndex = " + menIndex);
+        System.out.println("womenIndex = " + womenIndex);
+        softAssert.assertEquals(womenIndex, 12);
+        softAssert.assertEquals(menIndex, 9);
+        softAssert.assertEquals(kidsIndex, 13);
+        softAssert.assertAll();
 
 
     }
