@@ -50,6 +50,7 @@ public class Post05ObjectMapper_Map extends JsonplaceholderBaseUrl {
                 "                                    \"id\": 201\n" +
                 "                                    }";
 
+
         Map<String, Object> expectedData = new ObjectMapper().readValue(jsonInString, HashMap.class);
         System.out.println("expectedData = " + expectedData);
 
