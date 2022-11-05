@@ -40,6 +40,7 @@ public class Post05ObjectMapper_Map extends JsonplaceholderBaseUrl {
     @Test
     public void post05() throws IOException {
 
+
         //Set the url
         spec.pathParam("first", "todos");
 
