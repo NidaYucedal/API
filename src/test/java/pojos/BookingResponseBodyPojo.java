@@ -3,10 +3,12 @@ package pojos;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+//Bu annotation aynı levelde bilinmeyen verileri  görmezden gelerek diğer verilerin bu class tipinde Pojo class'a çevrilmesine yarıyor.
 public class BookingResponseBodyPojo {
 
     private Integer bookingid;
     private BookingPojo booking;
+
 
     public BookingResponseBodyPojo(Integer bookingid, BookingPojo booking) {
         this.bookingid = bookingid;

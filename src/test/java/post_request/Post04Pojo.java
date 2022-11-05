@@ -68,6 +68,15 @@ public class Post04Pojo extends RestfulBaseUrl {
         System.out.println("actualData = " + actualData);
 
         assertEquals(expectedData.getFirstname(),actualData.getBooking().getFirstname());
+        assertEquals(expectedData.getLastname(),actualData.getBooking().getLastname());
+        assertEquals(expectedData.getTotalprice(),actualData.getBooking().getTotalprice());
+        assertEquals(expectedData.getDepositpaid(),actualData.getBooking().getDepositpaid());
+        assertEquals(expectedData.getAdditionalneeds(),actualData.getBooking().getAdditionalneeds());
+
+        assertEquals(bookingDatesPojo.getCheckin(),actualData.getBooking().getBookingdates().getCheckin());
+        assertEquals(bookingDatesPojo.getCheckout(),actualData.getBooking().getBookingdates().getCheckout());
+
+
 
 
 
