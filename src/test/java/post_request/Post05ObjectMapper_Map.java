@@ -57,6 +57,7 @@ public class Post05ObjectMapper_Map extends JsonplaceholderBaseUrl {
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{first}");
         response.prettyPrint();
 
+
         //Do Assertion
         HashMap actualData=new ObjectMapper().readValue(response.asString(),HashMap.class);
         System.out.println("actualData = " + actualData);
