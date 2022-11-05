@@ -1,0 +1,148 @@
+/*Jackson Serialization (Serileştirme) Annotations
+@JsonAnyGetter
+Java’da bulunan Map veri tipini JSON’a dönüştürmek için kullanılır.
+public class Model {
+    public Integer id;
+    private Map<String, String> settings;
+    @JsonAnyGetter
+    public Map<String, String> getSettings() {
+        return settings;
+    }
+}
+Çıktı:
+{
+    "id": 2,
+    "key1": "value1",
+    "key2": "value2"
+}
+@JsonPropertyOrder
+Json çıktısının anahtarlarını sıralamak için kullanılır.
+@JsonPropertyOrder({"name", "id", "age"})
+public class Model {
+    public Integer id;
+    public String name;
+    public Integer age;
+}
+Çıktı:
+{
+    "name": "Jack",
+    "id": 2,
+    "age": 23
+}
+@JsonRawValue
+Verilen String değeri JSON olarak kullanmak için kullanılır.
+public class Model {
+    public int id;
+    @JsonRawValue
+    public String json;
+    Model(int id, String json) {
+        this.id = id;
+        this.json = json;
+    }
+}
+Model model = new Model(1, "{\"age\": 22}");
+Çıktı:
+{
+    "id": 1,
+    "json": {
+        "age": 22
+    }
+}
+@JsonValue
+Tüm örneği serileştirmek için kullanılacak tek bir yöntem belirtmek için kullanılır.
+public class Model {
+    private int id;
+    private String name;
+    @JsonValue
+    public String toJson() {
+        return name + " - " + id;
+    }
+}
+Çıktı:
+"Jack - 1"
+@JsonRootName
+JSON çıktısına ana anahtar vermek için kullanılır.
+@JsonRootName(value = "customer")
+public class Model {
+    private int id;
+    private String name;
+}
+Çıktı:
+{
+    "customer": {
+        "id": 1,
+        "name": "Jack"
+    }
+}
+Jackson Deserialization Annotations
+@JsonCreator
+Okumak istediğimiz JSON değeri modelimizdeki anahtarlardan farklı bir anahtar içeriyorsa, modelin kurucusu aracılığıyla okuduğumuz JSON’un doğru şekilde alınmasını sağlar.
+Okumak istediğimiz JSON:
+{
+    "id": 1,
+    "theName": "Jack"
+}
+theName alanı modelimizde name olarak geçtiği için okuma gerçekleşmez. Bunu düzeltmek için:
+public class Model {
+    public int id;
+    public String name;
+
+    @JsonCreator
+    public Model(@JsonProperty("id") int id, @JsonProperty("theName") String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+@JsonAnySetter
+@JsonAnyGetter açıklamasının yaptığı işin tersini yapar. Okunan JSON’daki modelde bulunan anahatarları doğru şekilde atadıktan sonra, kalan anahtarları ve değerleri bir Map nesnesine atar.
+public class Model {
+    public int id;
+    private Map<String, String> settings;
+    @JsonAnySetter
+    public void add(String key, String value) {
+        settings.put(key, value);
+    }
+}
+Okunan JSON:
+{
+    "id": 1,
+    "key1": "value1",
+    "key2": "value2"
+}
+id haricindeki anahtarlar ve değerler settings‘e atanır.
+@JsonIgnoreProperties
+JSON verisinde gözükmesi istenmeyen anahtarlar belirtilir.
+@JsonIgnoreProperties({"id"})
+public class Model {
+    public int id;
+    public String name;
+}
+Çıktı:
+{
+    "name": "Jack"
+}
+@JsonIgnore
+JSON verisinde gözükmesi istenmeyen anahtarlar özel olarak belirtmek istenirse kullanılır.
+public class Model {
+    @JsonIgnore
+    public int id;
+    public String name;
+}
+Çıktı:
+{
+    "name": "Jack"
+}
+@JsonInclude
+JSON verisinde hangi tür verilerin bulunacağını belirtmek için kullanılır.
+@JsonInclude(Include.NON_NULL)
+public class Model {
+    public int id;
+    public String name;
+}
+Model model = new Model(1, null);
+Çıktı:
+{
+    "id": 1
+}
+name anahtarı null değere sahip olduğu için çıktıda gözükmeyecek.
+Yukarıda sadece NON_NULL yani null olmayan değerler gözükmesini istedik.*/
