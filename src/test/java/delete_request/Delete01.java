@@ -37,7 +37,9 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         //Do Assertion
         Map actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
 
+
         assertEquals(200, response.getStatusCode());
+
 
         //1. Yol
         assertEquals(expectedData, actualData);
