@@ -35,7 +35,7 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         Response response = given().spec(spec).when().delete("/{first}/{second}");
 
 
-        //Do Assertio
+        //Do Assertion
         Map actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
 
 
