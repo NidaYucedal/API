@@ -54,10 +54,5 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         assertEquals(0, actualData.size());
 
 
-
-
-
-
-
     }
 }
