@@ -1,0 +1,31 @@
+****Api Nedir?****
+
+-Api (Application Programming Interface) yani Uygulama Programlama Arayüzüdür.
+Bir uygulamaya ait işlevlerin ve üretilen verilerin başka uygulamalarda da kullanılabilmesi
+için geliştirilen arayüzün adina API denir. Örneğin hem mobil uygulama hemde web uygulama kullanılan
+bir sistemde bu uygulamaların hem kendi içerisinde hemde server ile sağlıklı iletişim kurabilmesi için
+ayni dili konuşması gerekiyor. Bu diller içerisinde en yaygın olanı SOAP ve REST dir.
+
+***Swagger***
+
+-Swagger’ın önemli bir amacı RestApi ler için bir arayüz sağlamaktır.
+Bu hem insanların hemde bilgisayarlara kaynak koda erişmeden RestApi lerin özelliklerini görmesine,
+incelemesine ve anlamasına olanak sağlar.
+
+-Swagger,Apı'larınızın yapısını tanımlamanıza olanak tanıyan bir frameworkdur.
+
+-apı dökümantasyonunu
+
+200 başarılı(OK)
+404 bulunamadı(NOT FOUND)
+500 sunucu hatası(SERVER FAIL)
+201 created(olusturuldu)
+
+Serialization
+-Java objesinin Json datasına çevirilmesi.
+
+-De-Serialization
+Json datasının Java objesine çevrilmesi.
+
+Payload olusturma(map)
+-
