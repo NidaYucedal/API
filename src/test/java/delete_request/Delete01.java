@@ -28,7 +28,7 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         //Set the Url
         spec.pathParams("first", "todos", "second", 198);
 
-        //Set the expected dat
+        //Set the expected data
         Map<String, String> expectedData = new HashMap<>();
 
         //Send the Request and Get the Response
