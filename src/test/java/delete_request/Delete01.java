@@ -31,7 +31,7 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         //Set the expected data
         Map<String, String> expectedData = new HashMap<>();
 
-        //Send the Request and Get the Response
+        //Send the Request and Get the Respons
         Response response = given().spec(spec).when().delete("/{first}/{second}");
 
 
