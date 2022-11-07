@@ -35,7 +35,7 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         Response response = given().spec(spec).when().delete("/{first}/{second}");
 
 
-        //Do As
+        //Do Ass
         Map actualData = ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
 
 
