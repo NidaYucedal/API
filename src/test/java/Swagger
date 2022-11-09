@@ -14,7 +14,9 @@ incelemesine ve anlamasına olanak sağlar.
 
 -Swagger,Apı'larınızın yapısını tanımlamanıza olanak tanıyan bir frameworkdur.
 
--apı dökümantasyonunu
+-API belgeleri için SWAGGER kullandım.
+ SWAGGER bana API endpoint’leri veriyor ve bunların nasıl kullanılacağı
+ hakkında beni bilgilendiriyor.
 
 200 başarılı(OK)
 404 bulunamadı(NOT FOUND)
