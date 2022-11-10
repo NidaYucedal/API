@@ -56,6 +56,5 @@ public class Get17 extends DummyRestApiBaseUrl {
         assertEquals(data.getProfile_image(),actualData.getData().getProfile_image());
 
 
-
     }
 }
