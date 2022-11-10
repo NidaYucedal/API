@@ -90,7 +90,5 @@ And
         assertEquals(data.getProfile_image(),actualData.getData().getProfile_image());
 
 
-
-
     }
 }
