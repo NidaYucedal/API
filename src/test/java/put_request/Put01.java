@@ -57,6 +57,5 @@ I send PUT Request to the Url
         assertEquals(expectedData.get("userId"), actualData.get("userId"));
 
 
-
     }
 }
