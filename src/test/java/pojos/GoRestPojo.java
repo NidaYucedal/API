@@ -40,5 +40,6 @@ public class GoRestPojo {
                 "meta=" + meta +
                 ", data=" + data +
                 '}';
+
     }
 }
