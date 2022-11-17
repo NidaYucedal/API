@@ -84,7 +84,6 @@ And
         assertEquals(expectedData.getStatus(),actualData.getStatus());
         assertEquals(expectedData.getMessage(),expectedData.getMessage());
 
-
         assertEquals(expectedData.getData().getEmployee_name(),actualData.getData().getEmployee_name());
         assertEquals(data.getEmployee_age(),actualData.getData().getEmployee_age());
         assertEquals(data.getEmployee_salary(),actualData.getData().getEmployee_salary());
