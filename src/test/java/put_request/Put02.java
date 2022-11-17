@@ -90,6 +90,5 @@ And
         assertEquals(data.getEmployee_salary(),actualData.getData().getEmployee_salary());
         assertEquals(data.getProfile_image(),actualData.getData().getProfile_image());
 
-
     }
 }
