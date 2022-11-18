@@ -76,7 +76,5 @@ public class Post04Pojo extends RestfulBaseUrl {
         assertEquals(bookingDatesPojo.getCheckin(),actualData.getBooking().getBookingdates().getCheckin());
         assertEquals(bookingDatesPojo.getCheckout(),actualData.getBooking().getBookingdates().getCheckout());
 
-
-
     }
 }
