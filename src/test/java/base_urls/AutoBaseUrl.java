@@ -12,5 +12,6 @@ public class AutoBaseUrl {
     public void setUp(){
         spec= new RequestSpecBuilder()
                 .setBaseUri("https://automationexercise.com/api").build();
+
     }
 }
