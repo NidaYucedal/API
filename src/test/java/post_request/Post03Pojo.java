@@ -62,7 +62,5 @@ public class Post03Pojo extends JsonplaceholderBaseUrl {
 
 
 
-
-
     }
 }
