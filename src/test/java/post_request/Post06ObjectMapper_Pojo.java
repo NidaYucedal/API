@@ -59,5 +59,7 @@ public class Post06ObjectMapper_Pojo extends JsonplaceholderBaseUrl {
 
 
 
+
+
     }
 }
