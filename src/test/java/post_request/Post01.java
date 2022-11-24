@@ -57,5 +57,6 @@ public class Post01 extends JsonplaceholderBaseUrl {
         assertEquals(expectedData.get("userId"), actualData.get("userId"));
 
 
+
     }
 }
