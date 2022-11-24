@@ -62,7 +62,5 @@ public class Post01 extends JsonplaceholderBaseUrl {
 
 
 
-
-
     }
 }
