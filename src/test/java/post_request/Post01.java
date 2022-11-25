@@ -49,6 +49,8 @@ public class Post01 extends JsonplaceholderBaseUrl {
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedData).when().post("/{1}");
         response.prettyPrint();
 
+
+
         //do assertion
         Map<String, Object> actualData = response.as(HashMap.class);
 
