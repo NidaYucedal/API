@@ -50,7 +50,6 @@ public class Post01 extends JsonplaceholderBaseUrl {
         response.prettyPrint();
 
 
-
         //do assertion
         Map<String, Object> actualData = response.as(HashMap.class);
 
