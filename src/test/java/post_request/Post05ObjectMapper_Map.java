@@ -67,5 +67,7 @@ public class Post05ObjectMapper_Map extends JsonplaceholderBaseUrl {
         assertEquals(expectedData.get("title"), actualData.get("title"));
 
 
+
+
     }
 }
