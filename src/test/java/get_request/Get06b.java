@@ -54,6 +54,5 @@ public class Get06b extends ReqresBaseUrl {
         assertEquals(2,name.size());
 
 
-
     }
 }
