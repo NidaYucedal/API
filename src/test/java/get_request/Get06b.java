@@ -59,6 +59,5 @@ public class Get06b extends ReqresBaseUrl {
 
 
 
-
     }
 }
